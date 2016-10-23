@@ -1,0 +1,3 @@
+[submodule "src/github.com/making/echo-server"]
+	path = src/github.com/making/echo-server
+	url = https://github.com/making/echo-server.git

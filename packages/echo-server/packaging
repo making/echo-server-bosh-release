@@ -8,8 +8,14 @@ CPUS=$(grep -c ^processor /proc/cpuinfo)
 # $BOSH_INSTALL_TARGET - where you copy/install files to be included in package
 export HOME=/var/vcap
 
-pushd echo-server
-  chmod +x echo-server
-  cp -a echo-server $BOSH_INSTALL_TARGET/echo-server
-popd
+# Set Golang dependency
+export GOROOT=$(cd "/var/vcap/packages/golang" && pwd -P)
+export PATH=${GOROOT}/bin:${PATH}
 
+# Build Echo Server
+mkdir -p ${BOSH_COMPILE_TARGET}/go/src/github.com/making
+mv ${BOSH_COMPILE_TARGET}/github.com/making/echo-server ${BOSH_COMPILE_TARGET}/go/src/github.com/making/
+cd ${BOSH_COMPILE_TARGET}/go/src/github.com/making/echo-server
+export GOPATH=${BOSH_COMPILE_TARGET}/go
+go build
+cp -a echo-server $BOSH_INSTALL_TARGET/echo-server

@@ -3,3 +3,7 @@ echo-server/echo-server:
   object_id: b93dcb48-5dd4-4079-be3e-1801a0f41aee
   sha: 1cf1dc5f8eb3367af44ea5853b74e835dca6ccb9
   size: 3576040
+golang/go1.7.3.linux-amd64.tar.gz:
+  object_id: 77cfde23-dc9f-4309-9caf-6adaa851ff44
+  sha: ead40e884ad4d6512bcf7b3c7420dd7fa4a96140
+  size: 82565628

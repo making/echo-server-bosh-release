@@ -20,9 +20,10 @@ networks:
   type: manual
   subnets:
   - azs: [z1]
-    range: 10.244.123.0/24
-    reserved: [10.244.123.1]
-    static: [10.244.123.34]
+    range: 10.244.0.0/24
+    reserved: [10.244.0.1]
+    static:
+    - 10.244.0.2 - 10.244.0.30
 
 - name: echo-server
   type: manual
