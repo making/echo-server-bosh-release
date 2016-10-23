@@ -1,0 +1,26 @@
+---
+packages:
+- name: echo-server
+  version: baf771bb1298bd75f1b967d65a38caf57adbf24a
+  fingerprint: baf771bb1298bd75f1b967d65a38caf57adbf24a
+  sha1: 7ffa735b1e7a7b6a35a539a2eeb937f88f0a0af7
+  dependencies:
+  - golang
+- name: golang
+  version: 4c68329a01fbfed9714904f4cb3a5694c4b72bd9
+  fingerprint: 4c68329a01fbfed9714904f4cb3a5694c4b72bd9
+  sha1: d375f4b57c83f52495ac344c71f92d1cc6b14475
+  dependencies: []
+jobs:
+- name: echo-server
+  version: 785598e6128c4f27104551a5da180868e42e36eb
+  fingerprint: 785598e6128c4f27104551a5da180868e42e36eb
+  sha1: 7cfc49b749a55bfd38876be660320249da298b1e
+license:
+  version: c9f2d7016f206a5ebb23a50539dc46fa681dbffc
+  fingerprint: c9f2d7016f206a5ebb23a50539dc46fa681dbffc
+  sha1: 3c2c27acb95549f6c64e008952cca2a371a537fe
+commit_hash: c0fa38c3
+uncommitted_changes: true
+name: echo-server
+version: '2'
