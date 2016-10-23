@@ -7,15 +7,18 @@ update:
   serial: false
 
 jobs:
-  - name: just_install_packages
+  - name: echo-server
     templates:
-    - name: just_install_packages
+    - name: echo-server
       release: echo-server
     instances: 1
     persistent_disk: 0
     resource_pool: small_z1
     networks: (( param "Please configure the networks for this job" ))
-
+    properties:
+      server:
+        port: 12012
+    
 networks: (( param "Please configure the global network definitions for this Deployment" ))
 
 properties: {}

@@ -1,0 +1,20 @@
+---
+packages:
+- name: echo-server
+  version: 191b712ac3c6704d345ec4c37c3a2f92214a10ca
+  fingerprint: 191b712ac3c6704d345ec4c37c3a2f92214a10ca
+  sha1: f6c40d75d365d3c6374906329d5ea35fef72e560
+  dependencies: []
+jobs:
+- name: echo-server
+  version: 785598e6128c4f27104551a5da180868e42e36eb
+  fingerprint: 785598e6128c4f27104551a5da180868e42e36eb
+  sha1: 7cfc49b749a55bfd38876be660320249da298b1e
+license:
+  version: c9f2d7016f206a5ebb23a50539dc46fa681dbffc
+  fingerprint: c9f2d7016f206a5ebb23a50539dc46fa681dbffc
+  sha1: 3c2c27acb95549f6c64e008952cca2a371a537fe
+commit_hash: 422ae2e2
+uncommitted_changes: true
+name: echo-server
+version: '1'

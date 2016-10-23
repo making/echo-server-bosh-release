@@ -1,0 +1,5 @@
+check process echo-server
+  with pidfile /var/vcap/sys/run/echo-server/echo-server.pid
+  start program "/var/vcap/jobs/echo-server/bin/monit_debugger echo-server_ctl '/var/vcap/jobs/echo-server/bin/ctl start'"
+  stop program "/var/vcap/jobs/echo-server/bin/monit_debugger echo-server_ctl '/var/vcap/jobs/echo-server/bin/ctl stop'"
+  group vcap
