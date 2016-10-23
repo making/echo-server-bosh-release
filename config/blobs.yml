@@ -1,1 +1,5 @@
---- {}
+---
+echo-server/echo-server:
+  object_id: b93dcb48-5dd4-4079-be3e-1801a0f41aee
+  sha: 1cf1dc5f8eb3367af44ea5853b74e835dca6ccb9
+  size: 3576040
