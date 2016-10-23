@@ -1,0 +1,38 @@
+
+---
+# http://bosh.io/docs/warden-cpi.html#cloud-config
+name: echo-server
+
+director_uuid: <%= `bosh status --uuid` %>
+
+releases:
+- name: echo-server
+  version: latest
+
+stemcells:
+- os: ubuntu-trusty
+  alias: ubuntu
+  version: latest
+
+instance_groups:
+- name: echo-server
+  jobs:
+  - name: echo-server
+    release: echo-server
+    properties:
+      server:
+        port: 12012
+  instances: 1
+  stemcell: ubuntu
+  azs: [z1]
+  vm_type: default
+  persistent_disk_type: default
+  networks:
+  - name: echo-server
+    static_ips: [10.244.212.2]
+
+update:
+  canaries: 1
+  max_in_flight: 3
+  canary_watch_time: 30000-600000
+  update_watch_time: 5000-600000
