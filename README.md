@@ -8,7 +8,8 @@ To use this bosh release, first upload it to your bosh:
 
 ```
 bosh upload release https://github.com/making/echo-server-boshrelease/releases/download/v1/echo-server-1.tgz
-bosh cloud-config upadte cloud-config-warden.yml
+bosh cloud-config upadte manifest/cloud-config-warden.yml
+bosh deployment manifest/echo-server.yml
 bosh -n deploy
 ```
 
